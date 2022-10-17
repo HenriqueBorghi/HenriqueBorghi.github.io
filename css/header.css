@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header-menu {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.menu-link {
+  padding: 1.25rem 0.625rem;
+  font-size: 1.125rem;
+  line-height: 1.12;
+}
+.menu-mobile {
+  display: none;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+.menu-close {
+  display: none;
+}
+
+@media (max-width: 700px){
+  .header-menu {
+    display: grid;
+    gap: 1.875rem;
+    transform: translateY(-200%);
+    transition: transform 0.2s ;
+    position: absolute;
+    bottom: -80px;
+    right: 30px;
+    text-align: end;
+    z-index: 1000;
+  }
+  .mostrarMenu {
+    transform: translateY(0);
+  }
+  .menu-link {
+    padding: 0.625rem;
+  }
+  .menu-mobile {
+    display: block;
+  }
+}

@@ -1,0 +1,149 @@
+.formacao {
+  background-color: #141414;
+}
+.formacao-titulo {
+  color: #000;
+}
+.formacao-introducao {
+  color: #a3a3a3;
+  font-size: 24px;
+  line-height: 1.43;
+  max-width: 39.5ch;
+  margin-top: 14px;
+}
+.formacao-introducao strong {
+  color: #fff;
+}
+.formacao-conteudo {
+  display: grid;
+  gap: 60px;
+}
+.formacao-blocos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 664px;
+}
+.formacao-itens {
+  display: grid;
+  background-color: #000;
+  padding: 20px;
+  border-radius: 5px;
+  gap: 10px;
+  position: relative;
+}
+.formacao-itens::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background-image: linear-gradient(to bottom, #B6F829, #67DD0A);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+.formacao-nivel {
+  text-transform: uppercase;
+  color: #a3a3a3;
+  font-size: 14px;
+  line-height: 1.43;
+}
+.formacao-curso {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.39;
+}
+.formacao-universidade {
+  font-size: 18px;
+  line-height: 1.11;
+  color: #a3a3a3;
+  margin-top: 40px;
+}
+.adm {
+  max-width: 13ch;
+}
+.formacao-intensivo, .formacao-idiomas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.cursos-titulo {
+  text-transform: uppercase;
+  color: #8f8f8f;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.43;
+  margin-bottom: 10px;
+  position: relative;
+}
+.intensivo-horas {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.intensivo-horas span {
+  color: #8f8f8f;
+}
+.formacao-idiomas p {
+  color: #fff;
+}
+.formacao-idiomas p span {
+  color: #8f8f8f;
+}
+.intensivos::before {
+  content: url('../img/cursos.svg');
+  position: absolute;
+  left: -35px;
+  top: -2px;
+}
+.idiomas::before {
+  content: url('../img/idiomas.svg');
+  position: absolute;
+  left: -35px;
+  top: -2px;
+}
+@media (max-width: 1050px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+    justify-items: center;
+    max-width: 664px;
+  }
+  .formacao-titulo {
+    justify-self: left;
+    text-transform: capitalize;
+    font-size: 7rem;
+    word-break: normal;
+  }
+}
+@media (max-width: 700px) {
+  .formacao-titulo {
+    font-size: 4rem;
+    justify-self: center;
+  }
+  .formacao-introducao {
+    font-size: 18px;
+    justify-self: center;
+    text-align: center;
+  }
+  .formacao-blocos {
+    grid-template-columns: 1fr 1fr;
+  }
+  .formacao-itens:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+  .exp-design {
+    max-width: 15ch;
+  }
+}
+@media (max-width: 500px) {
+  .formacao-blocos {
+    grid-template-columns: 1fr;
+  }
+  .formacao-itens {
+    width: 164px;
+    justify-self: center;
+  }
+}
+
+
